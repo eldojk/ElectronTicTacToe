@@ -1,0 +1,28 @@
+*{
+  text-align: center;
+  font-family: "Courier"
+}
+
+body {
+  padding: 20px 40px;
+  font-family: "Arial";
+}
+
+h1 {
+  margin: 20px;
+}
+
+.t3cell {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+
+.btn-xl {
+	margin: 0.5px;
+    padding: 30px 60px;
+    font-size: 40px;
+    border-radius: 10px;
+}

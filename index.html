@@ -1,0 +1,29 @@
+<html><head>
+	  <script src="js/jquery.min.js"></script>
+    <script src="js/angular.js"></script>
+    <script src="app.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/underscore-min.js"></script>
+    
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+  </head>
+  
+  <body  ng-app='myApp' ng-controller="hangmanController">
+    <h1>Tic Tac Toe!</h1>
+    
+    <div class="container">
+      <div class="well">
+        <div><button class="btn-primary btn-xl" ng-repeat="cell in board[0]" ng-disabled="isTaken(cell);" ng-click="mark(cell);">{{ cell.value }}</button></div>
+        <div><button class="btn-primary btn-xl" ng-repeat="cell in board[1]" ng-disabled="isTaken(cell);" ng-click="mark(cell);">{{ cell.value }}</button></div>
+        <div><button class="btn-primary btn-xl" ng-repeat="cell in board[2]" ng-disabled="isTaken(cell);" ng-click="mark(cell);">{{ cell.value }}</button></div>
+        <br/>
+        <p>
+          <span ng-show="winner">Player {{ winningPlayer }} won!</span>
+        </p>
+      </div>
+    </div>
+          
+    <button ng-click="reset();" class="btn btn-default btn-large">Restart Game</button>
+  </body>
+</html>

@@ -14,12 +14,13 @@
     
     <div class="container">
       <div class="well">
-        <div><button class="btn-primary btn-xl" ng-repeat="cell in board[0]" ng-disabled="isTaken(cell);" ng-click="mark(cell);">{{ cell.value }}</button></div>
-        <div><button class="btn-primary btn-xl" ng-repeat="cell in board[1]" ng-disabled="isTaken(cell);" ng-click="mark(cell);">{{ cell.value }}</button></div>
-        <div><button class="btn-primary btn-xl" ng-repeat="cell in board[2]" ng-disabled="isTaken(cell);" ng-click="mark(cell);">{{ cell.value }}</button></div>
+        <div><button ng-class="cell.class" ng-repeat="cell in board[0]" ng-disabled="isCellDisabled(cell);" ng-click="mark(cell);">{{ cell.value }}</button></div>
+        <div><button ng-class="cell.class" ng-repeat="cell in board[1]" ng-disabled="isCellDisabled(cell);" ng-click="mark(cell);">{{ cell.value }}</button></div>
+        <div><button ng-class="cell.class" ng-repeat="cell in board[2]" ng-disabled="isCellDisabled(cell);" ng-click="mark(cell);">{{ cell.value }}</button></div>
         <br/>
         <p>
-          <span ng-show="winner">Player {{ winningPlayer }} won!</span>
+          <span class="label label-info" style="font-size: 20px;" ng-show="winner">{{winningMessage}}</span>
+          <span class="label label-info" style="font-size: 20px;" ng-show="draw">Game is a draw!</span>
         </p>
       </div>
     </div>

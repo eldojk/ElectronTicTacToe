@@ -20,6 +20,9 @@ npm start
 
 Or open the index.html file to run on a browser
 
+## Try it out here
+[ElectronTicTacToe](https://eldojk.github.io/ElectronTicTacToe/)
+
 ## Built With
 
 * [NPM](https://www.npmjs.com/) - Dependency Management
